@@ -7,6 +7,10 @@ import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 import Header from './Header';
 import history from '../history';
+import FormPage from '../components/subscribe/Subscribe';
+
+import CustomChatbot from "../components/chatbot/CustomChatbot";
+
 
 
 
@@ -23,10 +27,30 @@ const App = () => {
             <Route path="/streams/delete/:id" exact component={StreamDelete} />
             <Route path="/streams/:id" exact component={StreamShow} />
           </Switch>
+          <FormPage />
+          <CustomChatbot />
         </div>
       </Router>
     </div>
+
   );
 };
+
+// const App = () => {
+//   return (
+//     <div>
+//       <div className="container mt-5">
+//         ...... Rest of the code .....
+//            <CustomChatbot />
+//       </div>
+//     </div>
+//   )
+// }
+
+// ..... Rest of the code .....
+
+
+
+
 
 export default App;
