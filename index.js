@@ -31,4 +31,18 @@ app.get ('/streams', (req, res) => {
   });
 });
 
+app.patch('/streams/:id', (req,res)=>{
+  knex ('streams')
+  .where({id: req.params.id})
+  .update({
+   title: req.body.title,
+   description: req.body.description 
+  }
+  ).returning("*")
+  .then (data =>{
+    res.send(data)
+  })
+
+})
+
 app.listen (3002);
