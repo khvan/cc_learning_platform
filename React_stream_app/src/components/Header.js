@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <div className="ui secondary pointing menu">
       <Link to="/" className="item" >
-        <img className="img-responsive" src={logo} alt="logo" />
-        Streamer
+        <img className="img-responsive" src={logo} alt="logo" style={{width: 70, height:70}} />
+        
       </Link>
       <div className="right menu">
         <Link to="/" className="item">
