@@ -1,13 +1,34 @@
 const express = require ('express');
+const cors = require ('cors');
+const bodyParser = require ('body-parser');
+const knex = require ('./db/client');
 
+const app = express ();
 
-const app = express();
+app.use (bodyParser.json ());
+app.use (cors ());
 
+app.get ('/', (req, res) => {
+  res.send ('this is an express backend');
+});
 
-app.get('/', (req,res)=>{
-  res.send("this is an express backend")
-})
+app.post ('/streams', (req, res) => {
+  console.log(req.body)
+  const streamsParams = {
+    title: req.body.title,
+    description: req.body.description,
+    userId: req.body.userId,
+  };
 
+  knex ('streams').insert (streamsParams).returning ('*').then (data => {
+    res.redirect ('/');
+  });
+});
 
+app.get ('/streams', (req, res) => {
+  knex ('streams').select ('*').returning ('*').then (data => {
+    res.send (data);
+  });
+});
 
-app.listen(3002);
+app.listen (3002);
