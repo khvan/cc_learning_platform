@@ -45,4 +45,17 @@ app.patch('/streams/:id', (req,res)=>{
 
 })
 
+app.delete('/streams/:id', (req,res)=>{
+  knex('streams')
+  .where({id: req.params.id})
+  .delete()
+  .returning("*")
+  .then (data =>{
+    res.send(data)
+  })
+})
+
+
+
+
 app.listen (3002);
