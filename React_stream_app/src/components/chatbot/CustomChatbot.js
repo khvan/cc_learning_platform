@@ -12,12 +12,12 @@ function CustomChatbot(props) {
   const steps = [
     {
       id: "Greet",
-      message: "Hello, Welcome to our Stream",
+      message: "Hello, this is our streaming App",
       trigger: "Done"
     },
     {
       id: "Done",
-      message: "Have a great day !",
+      message: "How can I help you?",
       end: true
     }
   ];
