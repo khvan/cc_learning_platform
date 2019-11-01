@@ -7,7 +7,7 @@ Run:
 > npm install 
 To set up the database, you will need to install postgres and knex
 After the installation, inside psql, run: 
-> CREATE DATABASE <database name>
+> CREATE DATABASE database-name
 After creating database, run the migrations with knex:
 >knex migrate:latest
 In the root folder of the application ('cc_fp')
@@ -61,7 +61,7 @@ You will need to use OBS or any other tool of your preference to start streaming
 
 ### Authors:
 Made and brought to you with love by:
-[Boris Khvan](https://www.linkedin.com/in/boriskhvan/)
+[Boris Khvan](https://www.linkedin.com/in/boriskhvan/),
 [Yuriy Dmytrash](https://www.linkedin.com/in/yuriy-dmytrash/)
 
 
