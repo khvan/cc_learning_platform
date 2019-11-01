@@ -32,15 +32,17 @@ app.get ('/streams', (req, res) => {
 });
 
 app.patch('/streams/:id', (req,res)=>{
+  console.log(req.body)
   knex ('streams')
   .where({id: req.params.id})
   .update({
    title: req.body.title,
-   description: req.body.description 
+   description: req.body.description,
+   likes_count: req.body.likes_count
   }
   ).returning("*")
   .then (data =>{
-    res.send(data)
+    res.send("")
   })
 
 })
