@@ -5,15 +5,23 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites 
 Run:
 > npm install 
+
 To set up the database, you will need to install postgres and knex
 After the installation, inside psql, run: 
+
 > CREATE DATABASE database-name
+
 After creating database, run the migrations with knex:
+
 >knex migrate:latest
+
 In the root folder of the application ('cc_fp')
+
 > npm install node-media-server rtmp-server
+
 cd into newly created rtmp-server, and create index.js
 include the following config into index.js
+
 ```
  const NodeMediaServer = require('node-media-server');
   const config = {
