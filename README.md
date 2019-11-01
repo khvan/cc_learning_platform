@@ -6,8 +6,8 @@ These instructions will get you a copy of the project up and running on your loc
 Run:
 > npm install 
 
-To set up the database, you will need to install postgres and knex
-After the installation, inside psql, run: 
+To set up the database, you will need to install **postgres** and **knex**
+After the installation, inside **psql**, run: 
 
 > CREATE DATABASE database-name
 
@@ -15,11 +15,11 @@ After creating database, run the migrations with knex:
 
 >knex migrate:latest
 
-In the root folder of the application ('cc_fp')
+In the root folder of the application **('cc_fp')**
 
 > npm install node-media-server rtmp-server
 
-cd into newly created rtmp-server, and create index.js
+Then you need **cd** into newly created rtmp-server, and create index.js
 include the following config into index.js
 
 ```
@@ -41,14 +41,14 @@ const nms = new NodeMediaServer(config)
 nms.run();
 ```
 ### Running the project 
-To start up react client and express backend use:
+To start up **react client** and **express backend** use:
 > npm run dev 
-To start up the rtmp server, inside rtmp-server directory, run: 
+To start up the **rtmp server**, inside rtmp-server directory, run: 
 > npm start 
 After that you may register or login with Google OAuth. To begin streaming, get the stream id by creating a stream
 
 
-This is the landing page before where you can login with GoogleAuth 
+This is the landing page before where you can login with **GoogleAuth** 
 ![image](https://user-images.githubusercontent.com/50936934/68056903-91616180-fcb1-11e9-859c-6debd73ce1fb.png)
 
 After authentication you will be able to create new streams, edit and delete the streams that you have already authored. 
