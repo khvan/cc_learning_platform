@@ -31,16 +31,29 @@
 
 <body>
   <style>
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
     body {
-      background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+      background-image: linear-gradient(120deg, #FFF 0%, #DF83C1 100%);
+      /* background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
       background-repeat: no-repeat;
       /* background-size: auto; */
-      background-size: 1700px 900px;
+      /* background-size: 1700px 900px; */
+      background-size: 3500px 1700px;
       color: rgb(25, 75, 92);
     }
+.login {padding-top: 1em;}
+.button-container { margin: 0; padding: 0;}
+    .description {margin-bottom: 1em;}
+    .description::first-letter {text-transform: capitalize;}
 
-    ;
-  </style>
+    #stream-title {font-family: 'IBM Plex Mono', monospace;color: #DF83C1 !important; font-size: 1.65em; margin-bottom: .5em; margin-top: .5em;}
+
+    .content {padding: 1em;}
+
+    h1, h2, h3 {font-family: 'IBM Plex Mono', monospace;}
+    
+      </style>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div id="modal"></div>

@@ -3,6 +3,9 @@ import ChatBot from "react-simple-chatbot";
 
 
 
+
+
+
 function CustomChatbot(props) {
   const config = {
     width: "300px",

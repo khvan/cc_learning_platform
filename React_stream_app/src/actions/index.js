@@ -8,7 +8,8 @@ import {
   FETCH_STREAMS,
   FETCH_STREAM,
   DELETE_STREAM,
-  EDIT_STREAM
+  EDIT_STREAM,
+  LIKE_STREAM
 }
   from './types';
 
@@ -49,6 +50,13 @@ export const fetchStream = id => async dispatch => {
 
   dispatch({ type: FETCH_STREAM, payload: response.data });
 };
+
+export const addLike = (id, likes)  => async dispatch => {
+  const response = await streams.patch(`/streams/${id}`, {likes_count: likes});
+  dispatch({ type: LIKE_STREAM, payload: response.data });
+  history.push('/');
+};
+
 
 export const editStream = (id, formValues) => async dispatch => {
   const response = await streams.patch(`/streams/${id}`, formValues);
